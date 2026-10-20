@@ -15,7 +15,7 @@ multiarch fills that gap:
 - **Validation:** it reproduces `rmgarch`'s likelihood exactly. It runs 2–9× faster than rmgarch and 7–30× faster than tsmarch.
 
 ```bash
-pip install git+https://github.com/Legard525/multiarch
+pip install multiarch
 ```
 
 Requires Python ≥ 3.10, NumPy, SciPy, pandas and numba.
@@ -35,7 +35,7 @@ res.forecast(10)                     # mean, variance, correlation, covariance
 res.value_at_risk([0.5, 0.5], level=0.01, value=1e6)   # {'VaR': ..., 'ES': ...}
 ```
 
-[`examples/course_workflow.py`](examples/course_workflow.py) walks through the standard
+[`examples/course_workflow.py`](https://github.com/Legard525/multiarch/blob/main/examples/course_workflow.py) walks through the standard
 course sequence: EWMA → CCC → DCC → constant-correlation test → portfolio VaR → rolling VaR backtest.
 
 ## What's in it
@@ -69,7 +69,7 @@ with ω and μ rescaled.
 
 ## Validation
 
-All numbers come from [`validation/`](validation) and are reproducible: `Rscript rmgarch_fit.R .`
+All numbers come from [`validation/`](https://github.com/Legard525/multiarch/tree/main/validation) and are reproducible: `Rscript rmgarch_fit.R .`
 then `python compare.py`, and `Rscript tsmarch_fit.R .` then `python compare_tsmarch.py`.
 The data are daily returns of DJI stocks from `rmgarch`'s `dji30ret` (T = 5,521).
 
