@@ -1,0 +1,33 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multiarch"
+version = "0.2.0"
+description = "Fast multivariate GARCH for Python: CCC, DCC, aDCC, copula-DCC and GO-GARCH, validated against rmgarch"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+authors = [{ name = "Alex Nikolaenko" }]
+requires-python = ">=3.10"
+dependencies = ["numpy>=1.24", "scipy>=1.10", "pandas>=2.0", "numba>=0.58"]
+keywords = ["garch", "dcc", "multivariate garch", "volatility", "correlation", "copula", "go-garch", "value-at-risk", "econometrics", "finance"]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Intended Audience :: Financial and Insurance Industry",
+    "Programming Language :: Python :: 3",
+    "Topic :: Scientific/Engineering :: Mathematics",
+    "Topic :: Office/Business :: Financial :: Investment",
+]
+
+[project.urls]
+Homepage = "https://github.com/Legard525/multiarch"
+Issues = "https://github.com/Legard525/multiarch/issues"
+
+[project.optional-dependencies]
+test = ["pytest", "arch"]
+
+[tool.setuptools]
+packages = ["multiarch"]
